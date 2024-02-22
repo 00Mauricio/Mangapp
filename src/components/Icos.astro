@@ -1,0 +1,11 @@
+---
+interface Props {
+	icon: string;
+}
+const {icon } = Astro.props;
+let dd = icon.toString()
+var salsa = "i-"+ dd + " -w-7 h-7";
+console.log(salsa);
+---
+
+<span class={salsa} >7 </span>
