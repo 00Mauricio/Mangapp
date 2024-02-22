@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="app bg-slate-900 flex flex-col h-full w-full relative text-cyan-100 text-[1px]" 
+    class="app bg-slate-900 flex flex-col h-screen w-screen max-w-full text-cyan-100 text-[1px]" 
   >
     <div class="nav grid fixed top-0 w-full h-full">
       <header class="header bg-slate-300 flex ">daaaaaa</header>
@@ -28,20 +28,20 @@ const { title } = Astro.props;
             <img
               src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
               alt="user"
-              class=" rounded-full py-2 "
+              class=" rounded-full py-2"
             />
             <p>Jane Wilson</p>
           </div>
           <ul class="h-full flex flex-col justify-evenly  py-14 ">
             <li class="nav-item active">
-              <a href="#">
+              <a href="/#">
                 <span class="i-bx-home"></span>
                 Home
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="#">
+              <a href="test">
                 <span class="i-bx-trending-up"></span>
                 Trending
               </a>
@@ -99,7 +99,7 @@ const { title } = Astro.props;
     </div>
 
     <main
-      class="bg-orange-400 max-w-fit flex flex-col justify-items-center justify-center"
+      class="w-full h-full flex flex-col justify-items-center items-center"
     >
       
       <slot />

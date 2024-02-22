@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Eror 404">
+
+	<div class="pater size-full bg-red-800 text-center text-9xl flex justify-center items-center">
+		<div class="sombra size-full text-center text-9xl flex justify-center items-center">
+      <div class="error " title="404">404</div>
+    </div>
+	
+	</div>
+
+	
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+.pater{ 
+  display: flex;
+  color: #fff;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: -7px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(src/images/DE8S.gif);
+  
+  overflow: hidden;
+
+  .sombra{
+    z-index: 1;
+    background: radial-gradient(
+    50vw,
+    rgba(18, 35, 165, 0.207),
+    rgba(0, 0, 0, 0.786)
+  );
+
+  }
+}
+
+
+.error{
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.error:before,
+.error:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.error:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.error:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+	
+</style>
