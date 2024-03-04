@@ -1,73 +1,136 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { caja } from '../layouts/Caca';
 
 ---
 
 <Layout title="Welcome to Astro.">
-	<article class="max-w-full flex flex-col items-center bg-yellow-800">
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-0.avif"
-          alt="guitar player at concert"
-        />
+	<div class="w-full h-4 ">
+<div class="size-2 bg-teal-500"></div>
+	</div>
+<section id="banner" class="h-1/3 sm:h-3/5   ">
+	<img src={ caja[0] }  alt="names" class="banner ">
+	<img src={ caja[1] }  alt="names" class="banner">
+	<img src={ caja[2] }  alt="names" class="banner">
+	<img src={ caja[3] }  alt="names" class="banner">
+	<img src={ caja[4] }  alt="names" class="banner">
 
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-1.avif"
-          alt="duo singing"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-2.avif"
-          alt="crowd cheering"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-3.avif"
-          alt="singer performing"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-4.avif"
-          alt="singer fistbumping crowd"
-        />
 
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-5.avif"
-          alt="crowd cheering"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-6.avif"
-          alt="crowd in a concert"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-7.avif"
-          alt="woman singing"
-        />
 
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-13.avif"
-          alt="Person playing a cello"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-11.avif"
-          alt="Kiss playing"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-9.avif"
-          alt="young man singing"
-        />
+</section>
+<script is:inline>
+	// Obtener el elemento banner
+const banner = document.querySelector("#banner");
+const elementos = document.querySelectorAll("#banner > img");
+// Obtener el elemento de referencia
+const referencia = document.querySelector("body > main");
 
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-10.avif"
-          alt="woman singing"
-        />
-        <img
-          src="https://assets.codepen.io/1506195/unsplash-music-12.avif"
-          alt="man playing drums"
-        />
-      </article>
+
+// Agregar un event listener para el evento scroll
+banner.addEventListener("scroll", function() {
+	const {scrollWidth, scrollLeft,top } = banner;
+	const rate = Math.floor( (  banner.scrollLeft/banner.scrollLeft == 1 ? 1 : 0)*(banner.scrollLeft + Math.floor(banner.scrollWidth / elementos.length )*2 )*100 / banner.scrollWidth  );
+
+console.log(rate);
+if(rate >= 87){
+	banner.appendChild(banner.firstElementChild);
+}else if( rate == 0){
+	banner.prepend(banner.lastElementChild);
+}
+	// Tu código para ejecutar cuando el scroll cambie
+let elementoMasCercano = null;
+let distanciaMinima = Infinity;
+
+// Iteramos a través de los elementos para encontrar el más cercano al centro
+elementos.forEach(elemento => {
+    const elementoAncho = elemento.offsetWidth;
+    const elementoIzquierda = elemento.getBoundingClientRect().left;
+    const centroElemento = elementoIzquierda + elementoAncho / 2;
+    const distanciaAlCentro = Math.abs(referencia.offsetWidth / 2 - centroElemento);
+
+    if (distanciaAlCentro < distanciaMinima) {
+        distanciaMinima = distanciaAlCentro;
+        elementoMasCercano = elemento;
+    }
+
+	
+});
+
+// Removemos la clase "central" de todos los elementos
+elementos.forEach(elemento => {
+    elemento.classList.remove('central');
+	elemento.classList.add('oculto');
+});
+
+// Agregamos la clase "central" al elemento más cercano al centro
+if (elementoMasCercano) {
+    elementoMasCercano.classList.add('central');
+	elementoMasCercano.classList.remove('oculto');
+}
+
+});
+
+</script>
 </Layout>
 
 <style>
-  
+	#banner{
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: scroll;
+		scroll-snap-type: x mandatory; 
+		/*scroll-behavior:smooth;*/
+		scroll-padding: 0;
+		gap: 0;
+		overflow-y: hidden; /* Hide vertical scrollbar */
+
+		&:has(img:hover) img:not(:hover) {
+    filter: brightness(0.35);
+  }
 	
+
+		&::-webkit-scrollbar{
+			display: none;
+		}
+
+
+	}
+
+	.banner{
+	object-fit: fill;
+	scroll-snap-align: center;
+	vertical-align: middle;
+	width: calc(50%);
+	max-height: 80%;
+	/*transform: scale(0.9);
+    */transition:  transform 0.3s, filter 0.3s;
+  
+
+	&:hover {
+		transform: scale(1.3);
+      z-index: 1;
+      width: 100%;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+	}
+
+	 .central{
+	  transform: scale(1.3);
+      z-index: 1;
+      width: 100%;
+      aheight: auto;
+      aaspect-ratio: 1;
+      transition:  transform 0.3s, filter 0.3s;
+	}
+.oculto{
+	filter: brightness(0.35);
+	border-radius: 15px;
+
+}
+
 	.astro-a {
 		position: absolute;
 		top: -32px;
