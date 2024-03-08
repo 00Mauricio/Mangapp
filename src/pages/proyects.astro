@@ -1,0 +1,998 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Mangas from '../components/mangas.astro';
+
+---
+
+<Layout title='Proyects'>
+    <section class="flex flex-col gap-6">
+        <div class="flex-between px-2 md:px-0">
+          <div>
+            <h2 class="text-2xl md:text-3xl">Series</h2>
+            <small class="text-gray-400"> Mostrando 888 series de comic. </small>
+          </div>
+          <div>
+            <div class="flex gap-2 md:gap-6">
+              <button
+                aria-label="archive sorting"
+                class="block aspect-square rounded-full p-2 md:p-1 hover:bg-gray-800 transition-background-color sf-ripple-container"
+              >
+                <i
+                  class="text-2xl md:text-3xl i-heroicons-bars-arrow-down"
+                ></i></button
+              ><button
+                aria-label="archive filtering menu"
+                class="block aspect-square rounded-full p-2 md:p-1 hover:bg-gray-800 transition-background-color sf-ripple-container"
+              >
+                <i
+                  class="text-2xl md:text-3xl i-heroicons-adjustments-horizontal"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 md:gap-4 px-1 md:px-0"
+        >
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-abri-las-puertas-de-el-infierno"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/290/YAMA 1-lg.webp"
+                  srcset="https://dashboard.visorolym.com/storage/comics/covers/290/YAMA 1-lg.webp 768w, https://dashboard.visorolym.com/storage/comics/covers/290/YAMA 1-xl.webp 1536w"
+                  alt="Abrí las puertas de el infierno"
+                  loading="eager"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-abri-las-puertas-de-el-infierno"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Abrí las puertas de el infierno
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  40&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-abuelo-guerrero-y-nieta-suprema666344"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1112/1.7-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1112/1.7-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1112/1.7-xl.webp 1536w
+                  "
+                  alt="Abuelo Guerrero y Nieta Suprema"
+                  loading="eager"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-abuelo-guerrero-y-nieta-suprema666344"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Abuelo Guerrero y Nieta Suprema
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  28&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-academia-privada-laprossa"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1039/resource-xl.webp 1536w
+                  "
+                  alt="Academia privada laprossa (Spin off de <el hijo menor del maestro de la espada>)"
+                  loading="eager"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-academia-privada-laprossa"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Academia privada laprossa (Spin off de &lt;el hijo menor del
+                  maestro de la espada&gt;)
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  16&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-accidentalmente-me-hice-famoso-a-lo-largo-de-la-historia"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1279/Accidentalmente-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1279/Accidentalmente-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1279/Accidentalmente-xl.webp 1536w
+                  "
+                  alt="Accidentalmente me hice famoso a lo largo de la historia"
+                  loading="eager"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-accidentalmente-me-hice-famoso-a-lo-largo-de-la-historia"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Accidentalmente me hice famoso a lo largo de la historia
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  5&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-a-contrarreloj-sed-de-vida"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1010/1692390648804-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1010/1692390648804-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1010/1692390648804-xl.webp 1536w
+                  "
+                  alt="A contrarreloj: Sed de vida"
+                  loading="eager"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-a-contrarreloj-sed-de-vida"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  A contrarreloj: Sed de vida
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  34&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-actue-como-un-jefecito-final-sr-devorador5324"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1232/7 - MrCover-lg.webp"
+                  srcset="https://dashboard.visorolym.com/storage/comics/covers/1232/7 - MrCover-lg.webp 768w, https://dashboard.visorolym.com/storage/comics/covers/1232/7 - MrCover-xl.webp 1536w"
+                  alt="Actúe como un jefecito final, Sr. devorador"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-actue-como-un-jefecito-final-sr-devorador5324"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Actúe como un jefecito final, Sr. devorador
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  32&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-al-que-se-la-quieren-chupar5324"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/12/acumulacion-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/12/acumulacion-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/12/acumulacion-xl.webp 1536w
+                  "
+                  alt="Acumulación en el Infierno"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-al-que-se-la-quieren-chupar5324"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Acumulación en el Infierno
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  62&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Cancelado por el autor
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-agente-de-compras-celestial"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/855/shopping-agent-in-heaven-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/855/shopping-agent-in-heaven-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/855/shopping-agent-in-heaven-xl.webp 1536w
+                  "
+                  alt="AGENTE DE COMPRAS CELESTIAL"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-agente-de-compras-celestial"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  AGENTE DE COMPRAS CELESTIAL
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  29&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-al-borde-de-la-aniquilacion"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/526/portt-225x300-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/526/portt-225x300-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/526/portt-225x300-xl.webp 1536w
+                  "
+                  alt="Al Borde de la Aniquilacion"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-al-borde-de-la-aniquilacion"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Al Borde de la Aniquilacion
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  25&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-al-demonio-con-ser-un-santo-soy-un-doctor5324"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/17/Santo-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/17/Santo-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/17/Santo-xl.webp 1536w
+                  "
+                  alt="Al demonio con ser un santo, soy un doctor"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-al-demonio-con-ser-un-santo-soy-un-doctor5324"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Al demonio con ser un santo, soy un doctor
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  85&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-alma-5"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/78/cover_-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/78/cover_-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/78/cover_-xl.webp 1536w
+                  "
+                  alt="Alma 5"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-alma-5"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Alma 5
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  145&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Abandonado por el scan
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-alma-del-acero-ardiente"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/191/49_720-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/191/49_720-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/191/49_720-xl.webp 1536w
+                  "
+                  alt="Alma del Acero Ardiente"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-alma-del-acero-ardiente"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Alma del Acero Ardiente
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  23&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-al-principio-entregue-un-elixir-inmortal-antiguo-asustando-al-senor-supremo"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1069/e3e4e2e5a4530c37b410b07f98c4e3c94ead1e86.png@310w-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1069/e3e4e2e5a4530c37b410b07f98c4e3c94ead1e86.png@310w-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1069/e3e4e2e5a4530c37b410b07f98c4e3c94ead1e86.png@310w-xl.webp 1536w
+                  "
+                  alt="Al principio entregué un elixir inmortal antiguo, asustando al señor supremo."
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-al-principio-entregue-un-elixir-inmortal-antiguo-asustando-al-senor-supremo"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Al principio entregué un elixir inmortal antiguo, asustando al
+                  señor supremo.
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  40&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-alquimista-supremo"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/810/asas-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/810/asas-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/810/asas-xl.webp 1536w
+                  "
+                  alt="Alquimista supremo"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-alquimista-supremo"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Alquimista supremo
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  6&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-anciano-sin-par"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/330/per-2-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/330/per-2-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/330/per-2-xl.webp 1536w
+                  "
+                  alt="Anciano sin par"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-anciano-sin-par"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Anciano sin par
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  110&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-antiguo-monarca-divino"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/500/taigushenwang-jingwuhenyuanzhugegeyouzhiPhotonoise_scaleLevel3width-450-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/500/taigushenwang-jingwuhenyuanzhugegeyouzhiPhotonoise_scaleLevel3width-450-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/500/taigushenwang-jingwuhenyuanzhugegeyouzhiPhotonoise_scaleLevel3width-450-xl.webp 1536w
+                  "
+                  alt="Antiguo monarca divino"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-antiguo-monarca-divino"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Antiguo monarca divino
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  14&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-a-pesar-que-obtuve-una-profesion-rara-estoy-siendo-cazado-por-todo-el-servidor"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/612/suiranhuodeliaochaoxiyouzhiyequeyaobeiquanfuzhuisha-boomgongzuoshimengyuewenhua-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/612/suiranhuodeliaochaoxiyouzhiyequeyaobeiquanfuzhuisha-boomgongzuoshimengyuewenhua-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/612/suiranhuodeliaochaoxiyouzhiyequeyaobeiquanfuzhuisha-boomgongzuoshimengyuewenhua-xl.webp 1536w
+                  "
+                  alt="A pesar que obtuve una profesión rara, ¿estoy siendo cazado por todo el servidor?"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-a-pesar-que-obtuve-una-profesion-rara-estoy-siendo-cazado-por-todo-el-servidor"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  A pesar que obtuve una profesión rara, ¿estoy siendo cazado por
+                  todo el servidor?
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  24&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-apocalipsis-br-br"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/677/download (11)_clipdrop-enhance-lg.webp"
+                  srcset="https://dashboard.visorolym.com/storage/comics/covers/677/download (11)_clipdrop-enhance-lg.webp 768w, https://dashboard.visorolym.com/storage/comics/covers/677/download (11)_clipdrop-enhance-xl.webp 1536w"
+                  alt="apocalipsis-br - BR"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-apocalipsis-br-br"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  apocalipsis-br - BR
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  224&nbsp;Capítulo
+                </div>
+                <!---->
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-apocalipsis-de-kangho"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/694/62_720_v2-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/694/62_720_v2-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/694/62_720_v2-xl.webp 1536w
+                  "
+                  alt="Apocalipsis de Kangho"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-apocalipsis-de-kangho"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Apocalipsis de Kangho
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  14&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+          <figure class="relative overflow-hidden rounded-md">
+            <a
+              href="/series/comic-apocalipsis-despiadado-acumular-billones-de-suministros-al-principio"
+              class="block rounded-md sf-ripple-container"
+              ><div class="relative w-full rounded-md aspect-[2.75/4.75]">
+                <img
+                  src="https://dashboard.visorolym.com/storage/comics/covers/1277/1154241-lg.webp"
+                  srcset="
+                    https://dashboard.visorolym.com/storage/comics/covers/1277/1154241-lg.webp  768w,
+                    https://dashboard.visorolym.com/storage/comics/covers/1277/1154241-xl.webp 1536w
+                  "
+                  alt="Apocalipsis Despiadado: Acumular Billones de Suministros al Principio"
+                  loading="lazy"
+                  class="object-cover rounded-inherit w-full h-full"
+                  style="min-height: initial"
+                /><!---->
+              </div></a
+            >
+            <div
+              class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"
+            ></div>
+            <div
+              class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2"
+            >
+              <a
+                href="/series/comic-apocalipsis-despiadado-acumular-billones-de-suministros-al-principio"
+                class="rounded-md sf-ripple-container"
+                ><figcaption
+                  class="font-header text-lg md:text-xl leading-5 line-clamp-3"
+                >
+                  Apocalipsis Despiadado: Acumular Billones de Suministros al
+                  Principio
+                </figcaption></a
+              >
+              <div class="flex-center gap-1 md:gap-2">
+                <!---->
+                <div
+                  class="text-sm font-header h-8 bg-slate/25 backdrop-blur px-3 flex-center rounded-lg bg-slate-300"
+                >
+                  4&nbsp;Capítulo
+                </div>
+                <div
+                  class="text-sm font-header h-8 bg-emerald/25 backdrop-blur flex-center px-3 rounded-lg capitalize"
+                >
+                  Activo
+                </div>
+              </div>
+            </div>
+          </figure>
+                </div>
+        <div class="mt-8 p-16 flex-center text-3xl">
+          <i class="i-line-md-loading-twotone-loop"></i>
+        </div>
+</section>
+
+      <Mangas name="prueba" img="https://dashboard.visorolym.com/storage/comics/covers/1277/1154241-lg.webp"> 
+        
+      </Mangas>
+</Layout>   

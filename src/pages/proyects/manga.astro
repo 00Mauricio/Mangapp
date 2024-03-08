@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="the manga">
+<section class="bg-slate-500 w-full h-[80vh]">
+    <div class="mon backdrop-blur-md">
+    </div>
+
+    <div>
+        <figure>
+            <img src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp">
+
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+
+        </figure>
+    </div>
+
+    <asaide>
+        <div>
+        </div>
+    </asaide>
+</section>
+
+
+</Layout>
+
+<style>
+.mon{
+    background-image: url("../../images/DE8S.gif");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index:-1;
+    filter: grayscale(1);
+}
+</style>
