@@ -9,11 +9,9 @@ export default defineConfig({
   ],
   site: 'https://manga-app-mau-proyects.koyeb.app',
   
-  output: 'hybrid',
   build: {
-    client: './client'
+    inlineStylesheets: 'always'
   },
-  
   
     server: { port: 8000 },
   
