@@ -9,9 +9,11 @@ export default defineConfig({
   ],
   site: 'https://manga-app-mau-proyects.koyeb.app',
   // esta parte esla necesaria para costruir el css en el build
+  output: 'server', // o 'hybrid'
   build: {
-    inlineStylesheets: 'always'
+    client: './client'
   },
+  
   
     server: { port: 8000 },
   
