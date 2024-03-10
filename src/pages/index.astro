@@ -1,11 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import { caja } from '../layouts/Caca';
 
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Mangapp">
 	<div class="w-full h-4 ">
 <div class="size-2 bg-teal-500"></div>
 	</div>
@@ -29,7 +28,6 @@ const referencia = document.querySelector("body > main");
 
 // Agregar un event listener para el evento scroll
 banner.addEventListener("scroll", function() {
-	const {scrollWidth, scrollLeft,top } = banner;
 	const rate = Math.floor( (  banner.scrollLeft/banner.scrollLeft == 1 ? 1 : 0)*(banner.scrollLeft + Math.floor(banner.scrollWidth / elementos.length )*2 )*100 / banner.scrollWidth  );
 
 console.log(rate);

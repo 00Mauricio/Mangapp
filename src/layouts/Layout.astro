@@ -48,7 +48,7 @@ const { title } = Astro.props;
             </li>
 
             <li class="nav-item">
-              <a href="../proyects">
+              <a href="../proyectos">
                 <span class="i-heroicons-document-check-solid"></span>
                 cleaner
               </a>
@@ -99,13 +99,35 @@ const { title } = Astro.props;
     </div>
 
     <main
-      class="w-full h-full flex flex-col justify-items-center items-center"
+      class=" w-full h-full flex flex-col justify-items-center items-center"
     >
+    <div></div>
       
       <slot />
     </main>
   </body>
   <style is:global>
+    .fondo{
+      background-image: url(/src/images/image-w.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    .flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+    .font-header {
+    font-family: Cabin,sans-serif;
+}
+
+
+    .absolute-b-left {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
     html{
       font-size: 75%;
     }

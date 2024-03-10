@@ -1,4 +1,4 @@
-const { iconsPlugin, getIconCollections } = require("@egoist/tailwindcss-icons")
+import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons";
 
 /** @type {import('tailwindcss').Config} */
 

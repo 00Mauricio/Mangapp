@@ -14,6 +14,17 @@ import Layout from '../layouts/Layout.astro';
 
 	
 </Layout>
+<script>
+  console.log('¡Bienvenida, consola del navegador!');
+</script>
+
+<script is:inline>
+  const imgEror = ["image-w.png","DE8S.gif"];
+  const img = Math.floor(Math.random() * imgEror.length);
+  console.log(img);
+  document.getElementsByClassName("pater")[0].style.backgroundImage = "url(/src/images/" + imgEror[img] + ")" ;
+ 
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
@@ -25,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
   letter-spacing: -7px;
   background-size: cover;
   background-position: center;
-  background-image: url(src/images/DE8S.gif);
+  background-image: url(../images/image-w.png);
   
   overflow: hidden;
 
