@@ -8,7 +8,7 @@ const { name, img } = Astro.props;
 const href = "manga";//name.normalize();
 ---
 
-<figure class="relative overflow-hidden rounded-lg">
+<figure class="relative overflow-hidden rounded-lg flex-initial">
     <a
       href=  `proyects/${href}`
       class="block rounded-md sf-ripple-container"
@@ -27,7 +27,7 @@ const href = "manga";//name.normalize();
     <div class="pointer-events-none absolute -bottom-2 left-0 w-full h-2/4 bg-gradient-to-b from-transparent via-gray-800/70 to-gray-800/90 rounded-md"></div>
     <div class="absolute-b-left w-full py-2 px-1 md:px-2 rounded-inherit text-center flex flex-col gap-2">
       <a href="/series/comic-academia-privada-laprossa" class="rounded-md sf-ripple-container">
-         <figcaption class="font-header text-lg md:text-xl leading-5 line-clamp-3">Academia privada lapross</figcaption>
+         <p class="font-header text-lg md:text-xl leading-5 line-clamp-3">Academia privada lapross</p>
       </a>
       <div class="flex-center flex-row gap-1 md:gap-2">
       

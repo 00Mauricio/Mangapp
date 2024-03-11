@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+</head>
+<body>
+<!-- Textbox para ingresar la operación -->
+<input type="text" id="calculadora" placeholder="Ingrese la operación">
+<!-- Botón para ejecutar la operación -->
+<button onclick="calcular()">Calcular</button>
+<!-- Div para mostrar los resultados -->
+<div id="resultados"></div>
+<script>
+function calcular() {
+    // Obtener el texto ingresado en el textbox
+    var operacion = document.getElementById("calculadora").value;
+    // Validar si el texto está vacío
+    if (operacion.trim() === "") {
+        alert("Por favor ingrese una operación");
+        return;
+    }
+    // Intentar evaluar la operación y obtener el resultado
+    try {
+        var resultado = eval(operacion);
+        // Mostrar el resultado en consola
+        console.log("Resultado:", resultado);
+        // Agregar el resultado al array "resultados"
+        resultados.push(resultado);
+        // Mostrar los resultados en el div "resultados"
+        mostrarResultados();
+
+    } catch (error) {
+        // Capturar errores de sintaxis u otros errores de evaluación
+        alert("Error al calcular la operación. Por favor, verifique la sintaxis.");
+        console.error("Error:", error);
+    }
+}
+// Array para almacenar los resultados
+var resultados = [];
+// Función para mostrar los resultados en el div "resultados"
+function mostrarResultados() {
+    var resultadosDiv = document.getElementById("resultados");
+    resultadosDiv.innerHTML = "<h3>Resultados:</h3>";
+    for (var i = 0; i < resultados.length; i++) {
+        resultadosDiv.innerHTML += "<p>Resultado " + (i + 1) + ": " + resultados[i] + "</p>";
+    }
+}
+</script>
+</body>
 </html>

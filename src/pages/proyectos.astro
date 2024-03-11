@@ -5,7 +5,8 @@ import Mangas from '../components/mangas.astro';
 ---
 
 <Layout title='Proyects'>
-  <div class="relative z-20 w-full flex justify-center min-h-60 py-10 bg-slate-400">
+  
+  <div class="relative z-20 w-full flex justify-center min-h-60 py-10 ">
     <div
       class="bg-gray-800/10 backdrop-blur rounded-xl w-11/12 flex flex-col justify-center items-center"
     >
@@ -162,8 +163,9 @@ import Mangas from '../components/mangas.astro';
         </div>
     </div>
   </div>
-    <section class="flex flex-col gap-6   mx-auto relative py-10  bg-gray-800/10 backdrop-blur rounded-xl w-11/12  ">
-        <div class="flex  justify-between px-2 text-2xl  md:px-0">
+
+    <section class="flex flex-col gap-6   mx-auto relative py-10  bg-gray-800/10 backdrop-blur rounded-xl clamp  ">
+        <div class="flex  justify-between px-4 text-2xl md:px-2 ">
           <div>
             <h2 class="md:text-3xl">Series</h2>
             <small class="text-gray-400 "> Mostrando 888 series de comic. </small>
@@ -184,7 +186,7 @@ import Mangas from '../components/mangas.astro';
           </div>
         </div>
         
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 md:gap-4 px-1 md:px-0">
+        <div class="gallery px-4 md:px-0">
           
         <Mangas name="ramona" img="https://dashboard.visorolym.com/storage/comics/covers/290/YAMA%201-xl.webp" >
         </Mangas>
@@ -205,3 +207,13 @@ import Mangas from '../components/mangas.astro';
 
   
 </Layout>   
+
+<style>
+  .gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: minmax(max(10rem,18%),1fr);
+  grid-template-columns: repeat(auto-fill, minmax(max(10rem,18%),1fr));
+  
+  }
+</style>

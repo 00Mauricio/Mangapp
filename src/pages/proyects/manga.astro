@@ -1,29 +1,52 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/Layout copy.astro';
+import Contenedor from '../../layouts/contenedor.astro';
 ---
 
 <Layout title="the manga">
-<section class="bg-slate-500 w-full h-[80vh]">
+    <Contenedor>
+        
+        
+    <div class="flex-center justify-end w-full h-[80vh] ">
+
+        
+        <div class="flex-center">
+            <figure class="size-3/4   rounded-md overflow-hidden">
+                <img src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp">
+    
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    
+            </figure>
+        </div>
+    
+        <div class="flex  w-4/5 h-full">
+            <div class="w-full">
+                <div id="rexo" class="size-full flex-center flex-col p-2">
+                    <h2 class="text-3xl" data-jname="Bai She II: Qing She Jie Qi">White Snake 2: The Tribulation of the Green Snake</h2>
+                    <p class="text-sm text-pretty text-clip">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vel, accusamus ducimus cum suscipit provident possimus. Minus, sapiente possimus? Quam voluptas error, voluptatibus aliquam omnis quisquam quod tempora repellat! Recusandae!
+                    </p>    
+                </div>
+                
+            </div>
+            <Contenedor>
+                <div id="rexoa" class="bg-white w-auto">
+                    <h2 class="film-name dynamic-name" data-jname="Bai She II: Qing She Jie Qi">White Snake 2: The Tribulation of the Green Snake</h2>
+                </div>
+            </Contenedor>
+            
+        </div>
+    </div>
+        
+    </Contenedor>
     <div class="mon backdrop-blur-md">
     </div>
 
-    <div>
-        <figure>
-            <img src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp">
 
-            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-
-        </figure>
-    </div>
-
-    <asaide>
-        <div>
-        </div>
-    </asaide>
-</section>
-
-
+    
 </Layout>
+
+
 
 <style>
 .mon{

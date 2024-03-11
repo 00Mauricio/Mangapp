@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Mangapp
 
 ```sh
 npm create astro@latest -- --template basics

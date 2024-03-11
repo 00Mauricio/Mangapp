@@ -1,0 +1,230 @@
+---
+import Icos from '@/components/Icos.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="flex h-screen w-screen max-w-full text-xs bg3" 
+  >
+  <nav class="nav hidden sm:flex h-full w-max hover:w-18 max-w-[20%]  pr-2  flex-col justify-evenly  *:text-sm text-center bg1 color5">
+    
+    <div id="profile" class="flex-center flex-col text-sm color4 pb-4">
+      <img
+        src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
+        alt="user"
+        class=" rounded-full max-w-12 py-1"
+      />
+      <p class="text-xs"> Wilson</p>
+    </div>
+    
+      
+    <ul class=" h-2/5 flex-center evenly flex-col  my-8">
+
+        <Icos href='/#' icon="i-bx-home" body='Home'>
+        </Icos>
+        <Icos href='test' icon="i-bx-trending-up" body='Trending'>
+        </Icos>
+        <Icos href='../proyectos' icon="i-heroicons-document-check-solid" body='cleaner'>
+        </Icos>
+        <Icos href=/'#' icon="i-heroicons-currency-rupee-16-solid" body=traslations'>
+        </Icos>
+        <Icos href='/#' icon="i-heroicons-heart-solid" body='Favorites'>
+        </Icos>
+
+    </ul>
+  
+    <ul class="pb-4 h-1/4 flex-center evenly flex-col">
+
+      <Icos href='/#' icon="i-bx-bxs-user" body='Account'>
+      </Icos>
+      <Icos href='/#' icon="i-heroicons-cog-6-tooth  hover:animate-spin transition duration-1000" body='Settings'>
+      </Icos>
+      <Icos href='/#' icon="i-heroicons-arrow-left-end-on-rectangle-20-solid" body='Logout'>
+      </Icos>
+    </ul>
+
+  
+
+  </nav>
+
+    <div class=" size-full  pl-1">
+      <header class="round relative top-0  h-10 w-full flex bg2">
+        
+      </header>
+      <main
+      class="round w-full main flex flex-col justify-items-center items-center py-4 bg2"
+    >
+      
+      <slot />
+    
+
+    </main>
+
+    </div>
+
+    
+  </body>
+  <style is:global>
+  :root{
+--color1: #122b47;
+--color2: #34456f;
+--color3: #7869a6;
+--color4: #cc90de;
+--color5: #f8b5ed;
+color: var(--color5);
+background-color: var(--color1);
+--navT : 1.5s;
+  }
+.bg1 {background-color: var(--color1);}
+.bg2 {background-color: var(--color2);}
+.bg3 {background-color: var(--color3);}
+.bg4 {background-color: var(--color4);}
+.bg5 {background-color: var(--color5);}
+
+.color1 {color: var(--color1);}
+.color2 {color: var(--color2);}
+.color3 {color: var(--color3);}
+.color4 {color: var(--color4);}
+.color5 {color: var(--color5);}
+
+
+
+
+.nav{
+  width: clamp(15px,42px,50px);
+  transition: width 0.22s;
+  transition-timing-function:ease;
+
+
+
+
+  li{
+    padding: auto 0 0;
+    font-size: 0;
+  }
+  &:active{
+    background-color: #f8b5ed;
+  }
+
+  &:hover{
+    transition-delay: var(--navT);
+    
+
+        width:20%;
+        li {
+          font-size: 1.15em;
+          line-height: 1.25rem;
+ 
+          a{
+            justify-content: flex-start;
+          }
+          h2{
+            width: 25%;
+          padding: 0 15px 0 0;
+          }
+          p{
+            margin: 0 0 0 10px;
+            
+            transition-delay: calc(0.3s + var(--navT)) ;
+            
+          }
+        }
+        #profile{
+         
+          img{
+          
+            max-width: 60%;
+            transition: 0.05s;
+            transition-timing-function: ease-out;
+            transition-delay: calc(0s + var(--navT));
+            
+          }
+          p{
+          display: inline-block;
+          font-size: 1.3em;
+          line-height: 1.25rem;
+          transition-delay: calc(0.3s + var(--navT)) ;
+        }
+        
+
+        }
+        
+      }
+
+  
+}
+.round{
+  overflow: hidden;
+    border-radius: 5px;
+    margin: 5px 0 0;
+
+}
+
+
+    .clamp{
+      width: clamp(min(10vw, 20rem), 85vw, max(80vw, 80%));
+    }
+
+    .fondo{
+      background-image: url(/src/images/image-w.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.evenly{
+    justify-content: space-evenly;
+}
+    .font-header {
+    font-family: Cabin,sans-serif;
+}
+
+
+    .absolute-b-left {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+    html{
+      font-size: 1em;
+    }
+    .main{
+      height:calc(100% - 2.5rem - 10px) ;
+    }
+   
+    .code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+
+
+
+  </style>
+</html>
