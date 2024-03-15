@@ -1,4 +1,11 @@
 ---
+import Icos from '@/components/Icos.astro';
+import Contenedor from '@/components/contenedor.astro'; 
+import Buscador from '@/components/Buscador.astro'; 
+
+import { ViewTransitions } from 'astro:transitions';
+
+
 interface Props {
   title: string;
 }
@@ -15,106 +22,78 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body
-    class="app flex flex-col h-screen w-screen max-w-full  text-[1px] bg1" 
+    class="flex size-auto max-w-full text-xs bg3" 
   >
-    <div class="nav grid fixed top-0 w-full h-full">
-      <header class="header  flex bg2">daaaaaa</header>
 
-      <nav class="menu h-full max-w-[90%] flex flex-col justify-evenly  text-sm text-center color5">
-        <div class="">
-          <div class="user-info">
-            <img
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
-              alt="user"
-              class=" rounded-full py-2"
-            />
-            <p>Jane Wilson</p>
+  <nav class="nav max-w-xs sm:max-w-[20%] flex  h-screen  w-max hover:w-18   px-1  flex-col justify-evenly  *:text-sm text-center bg1 color5 static"  >
+   
+    <Contenedor clase="w-4/5 m-auto flex-center flex-col text-sm color4 pb-4"  id="profile">
+      <img
+      src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
+      alt="user"
+      class=" rounded-full max-w-12 py-1"
+    />
+    <p class="text-xs"> Wilson</p>
+
+    </Contenedor>
+    
+    <ul class="navegacion h-2/5 flex-center evenly flex-col  my-8  border-x-slate-50 border-spacing-px " >
+
+        <Icos href='/#' icon="i-bx-home" body='Home' title={title}>
+        </Icos>
+        <Icos href='../test' icon="i-bx-trending-up" body='Manga' title={title}>
+        </Icos>
+        <Icos href='../proyectos' icon="i-heroicons-document-check-solid" body='cleaner' title={title}>
+        </Icos>
+        <Icos href="../proyects/manga" icon="i-heroicons-currency-rupee-16-solid" body="Traduccion" title={title}>
+        </Icos>
+        <Icos href='/#' icon="i-heroicons-heart-solid" body='Favorites' title={title}>
+        </Icos>
+
+    </ul>
+    
+    <ul class="navegacion pb-4 h-1/4 flex-center evenly flex-col ">
+    
+
+      <Icos href='/#' icon="i-bx-bxs-user" body='Account' title={title}>
+      </Icos>
+      <Icos href='/#' icon="i-heroicons-cog-6-tooth  hover:animate-spin transition duration-1000" body='Settings' title={title}>
+      </Icos>
+      <Icos href='/#' icon="i-heroicons-arrow-left-end-on-rectangle-20-solid" body='Logout' title={title}>
+      </Icos>
+    </ul>
+
+  </nav>
+
+    <div class=" size-full  pl-1">
+      <header class="round  h-10 w-full flex bg1 ">   
+      </header>
+      <main class="round w-full main flex flex-col justify-items-center items-center py-4 bg2">
+     
+          <div class=" min-w-max w-full  z-40 bg-opacity-95 bg5 rounded-xl">
+            <Buscador>
+            </Buscador>
           </div>
-          <ul class="h-full flex flex-col justify-evenly  py-14 ">
-            <li class="nav-item active">
-              <a href="/#">
-                <span class="i-bx-home"></span>
-                Home
-              </a>
-            </li>
+    
+          <slot />
 
-            <li class="nav-item">
-              <a href="test">
-                <span class="i-bx-trending-up"></span>
-                Trending
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="../proyectos">
-                <span class="i-heroicons-document-check-solid"></span>
-                cleaner
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#">
-                <span class="i-heroicons-currency-rupee-16-solid"></span>
-                traslation
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#">
-                <span class="i-heroicons-heart-solid"></span>
-                Favorites
-              </a>
-            </li>
-          </ul>
-        </div>
-      
-        
-        
-        <ul class="py-14">
-          <li class="nav-item">
-            <a href="#">
-              <span class="i-bx-bxs-user"></span>
-              Account
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#">
-              <span class="i-heroicons-cog-6-tooth  hover:animate-spin transition duration-1000"></span>
-              Settings
-            </a>
-           
-          </li>
-
-          <li class="nav-item">
-            <a href="#">
-              <i class="fa fa-right-from-bracket nav-icon"></i>
-              Logout
-            </a>
-          </li>
-        </ul>
-      </nav>
+      </main>
     </div>
-
-    <main
-      class=" w-full h-full flex flex-col justify-items-center items-center py-4 bg2"
-    >
-    <div></div>
-      
-      <slot />
-    </main>
   </body>
+  
   <style is:global>
   :root{
---color1: #122b47;;
---color2: #34456f;;
---color3: #7869a6;;
---color4: #cc90de;;
---color5: #f8b5ed;;
+--color1: #122b47;
+--color2: #34456f;
+--color3: #7869a6;
+--color4: #cc90de;
+--color5: #f8b5ed;
 color: var(--color5);
 background-color: var(--color1);
+--navT : 1.5s;
   }
 .bg1 {background-color: var(--color1);}
 .bg2 {background-color: var(--color2);}
@@ -128,9 +107,108 @@ background-color: var(--color1);
 .color4 {color: var(--color4);}
 .color5 {color: var(--color5);}
 
+.enlace-activo{
+  box-shadow:rgba(0, 0, 0, 0.45) -1px 3px 1px 2px;
+  background-color: var(--color2);
+}
+.static{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+
+.nav{
+  width: clamp(15px,42px,50px);
+  transition: width 0.22s;
+  transition-timing-function:ease;
 
 
 
+
+  li{
+    font-size: 0;
+    a{
+      justify-content: flex-start;
+    }
+  }
+
+
+  &:hover{
+    
+    transition-delay: var(--navT);
+    
+   
+        width:100%;
+
+        .enlace-activo{
+          box-shadow:none;
+          
+          background-color: var(--color1);
+          transition-property: background-color , box-shadow;
+          transition-delay:  var(--navT);
+        }
+        li{
+          font-size: 1.15em;
+          line-height: 1.25rem;
+          transition-delay:  font-size line-height var(--navT);
+
+                
+            &:hover {
+            background-color: var(--color2);
+            transition: background-color 0.22s;
+        
+            }
+
+          h2{
+            width: 25%;
+          padding: 0 15px 0 0;
+          }
+          p{
+            margin: 0 0 0 10px;  
+            transition-delay: calc(0.3s + var(--navT)) ;
+            
+          }
+        }
+        #profile{
+          background-color: var(--color5);
+          transition: 0.23s;
+          transition-timing-function: ease-in;
+          transition-delay: calc(0s + var(--navT));
+          
+          
+
+          img{
+            background-color: var(--color1);
+            padding: 0.5em ;
+            max-width: 60%;
+            transition: 0.05s;
+            transition-timing-function: ease-out;
+            transition-delay: calc(0s + var(--navT));
+            
+          }
+          p{
+          display: inline-block;
+          color: var(--color2);
+          padding: 0.4em 0 0 0;
+          font-size: 1.3em;
+          line-height: 1.25rem;
+          transition-delay: calc(0.3s + var(--navT)) ;
+        }
+        
+
+        }
+        
+      }
+
+  
+}
+.round{
+  overflow: hidden;
+    border-radius: 5px;
+    margin: 5px 0 0;
+
+}
 
 
     .clamp{
@@ -143,10 +221,14 @@ background-color: var(--color1);
     background-repeat: no-repeat;
     background-size: contain;
 }
-    .flex-center {
+.flex-center {
     align-items: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.evenly{
+    justify-content: space-evenly;
 }
     .font-header {
     font-family: Cabin,sans-serif;
@@ -161,20 +243,11 @@ background-color: var(--color1);
     html{
       font-size: 1em;
     }
-    ul li a{
-      color: transparent;
-      font-size: 0.8em;
-
-      &:hover{
-        color: #1e2027;
-      }
-
-      & span{
-        font-size:1.5rem;
-        color: var(--color5);
-      }
+    .main{
+      height:calc(100% - 2.5rem - 10px) ;
     }
-    code {
+   
+    .code {
       font-family:
         Menlo,
         Monaco,
@@ -188,46 +261,5 @@ background-color: var(--color1);
 
 
 
-    .nav {
-      display: grid;
-      grid-template-areas:
-        "menu header"
-        "menu . ";
-      grid-template-columns: clamp(25px, 45px, 50%) auto;
-      grid-template-rows: 40px auto;
-    }
-    .app {
-      display: grid;
-      grid-template-areas:
-        ". ."
-        ". main ";
-      grid-template-columns: clamp(25px, 45px, 50%) auto;
-      grid-template-rows: 40px auto;
-    }
-    .header {
-      grid-area: header;
-      &:hover{
-        background-color: var(--color2);
-      }
-    }
-    .menu {
-      grid-area: menu;
-      &:hover{
-        background-color: var(--color2);
-        width: 6em ;
-      }
-    }
-    main {
-      grid-area: main;
-    }
-
-    .amain {
-      position: relative;
-      top: 0;
-      background-color: #1e2027;
-      background-size: cover;
-      background-position: center;
-      background-image: url(https://s1.gifyu.com/images/Zero-Two-10fps.gif);
-    }
   </style>
 </html>
