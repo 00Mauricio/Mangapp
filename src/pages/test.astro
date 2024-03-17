@@ -1,9 +1,20 @@
 ---
-import Layout from '../layouts/Layout copy.astro';
+import Layout from '../layouts/Layout.astro';
+import { fetchData } from '@/components/Api';
 
+var mundo = await fetchData(); // Declara la variable global
 
----
-
-<Layout title="Welcome to Astro.">
-
+console.log('URL desde variable global:', mundo ? mundo.data[4] : 'No disponible');
+var imgen =   mundo ? mundo.data: 'No disponible';
+var caja = [];
+for (let index = 0; index < imgen.length; index++) {
+    const element =  `<h2>${imgen[index].title}</h2> <img src=${imgen[index].images.webp.image_url} alt=${imgen[index].title}> `;
+    caja.push(element);
+}
+---  
+<Layout title="Proyects"  transition:name="Home"> 
+     
+    <div set:html = {caja}> </div>   
 </Layout>
+
+ 

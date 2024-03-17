@@ -6,47 +6,37 @@
 <title>Calculadora</title>
 </head>
 <body>
-<!-- Textbox para ingresar la operación -->
-<input type="text" id="calculadora" placeholder="Ingrese la operación">
-<!-- Botón para ejecutar la operación -->
-<button onclick="calcular()">Calcular</button>
-<!-- Div para mostrar los resultados -->
-<div id="resultados"></div>
-<script>
-function calcular() {
-    // Obtener el texto ingresado en el textbox
-    var operacion = document.getElementById("calculadora").value;
-    // Validar si el texto está vacío
-    if (operacion.trim() === "") {
-        alert("Por favor ingrese una operación");
-        return;
-    }
-    // Intentar evaluar la operación y obtener el resultado
-    try {
-        var resultado = eval(operacion);
-        // Mostrar el resultado en consola
-        console.log("Resultado:", resultado);
-        // Agregar el resultado al array "resultados"
-        resultados.push(resultado);
-        // Mostrar los resultados en el div "resultados"
-        mostrarResultados();
 
-    } catch (error) {
-        // Capturar errores de sintaxis u otros errores de evaluación
-        alert("Error al calcular la operación. Por favor, verifique la sintaxis.");
-        console.error("Error:", error);
-    }
+    <div class="container">
+        <div class="sticky-header">
+          Soy un encabezado pegajoso
+        </div>
+        <div class="content">
+          <!-- Contenido de la página -->
+        </div>
+      </div>
+
+      
+      <style>
+        .sticky-header {
+  position: -webkit-sticky; /* Para navegadores basados en WebKit */
+  position: sticky; /* Establecer como pegajoso */
+  top: 0; /* Fijar en la parte superior de su contenedor */
+  background-color: #ffffff; /* Color de fondo */
+  padding: 10px; /* Espaciado interior */
+  z-index: 1000; /* Asegurar que esté en la parte superior */
 }
-// Array para almacenar los resultados
-var resultados = [];
-// Función para mostrar los resultados en el div "resultados"
-function mostrarResultados() {
-    var resultadosDiv = document.getElementById("resultados");
-    resultadosDiv.innerHTML = "<h3>Resultados:</h3>";
-    for (var i = 0; i < resultados.length; i++) {
-        resultadosDiv.innerHTML += "<p>Resultado " + (i + 1) + ": " + resultados[i] + "</p>";
-    }
+
+.content {
+  height: 2000px; /* Altura para simular contenido largo */
+  padding: 20px; /* Espaciado interior */
 }
-</script>
+
+.container {
+  width: 80%; /* Ancho del contenedor principal */
+  margin: 0 auto; /* Centrar el contenedor */
+  border: 1px solid #ccc; /* Borde para visualización */
+}
+      </style>
 </body>
 </html>

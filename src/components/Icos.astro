@@ -3,29 +3,20 @@ interface Props {
 	icon: string;
 	body: string;
 	href: string;
+	title: string;
 }
 
-/*
-dale ctr + c a la terminal 
-y ejecuta denuevo el proyecto
-http://localhost:8000
-no me muestra el programa en ejecucion 
-regrese
-se vio?
-mmmmm
-http://localhost:8001/proyects/manga
-parece 
-*/
-const { href, icon, body } = Astro.props;
+const { href, icon, body, title} = Astro.props;
+const select = body == title ? "enlace-activo": "";
 ---
 	  
 
-	    <li class="rounded-lg opacity-80 w-11/12 flex-center size-full  color5">
-		<a href={href} class="flex-center justify-start evenly size-4/5" aria-label="alreay">
+	    <li class= `rounded-lg opacity-80  flex-center w-11/12 h-fit py-1 color5 ${select}`>
+		<a href={href} class="flex-center w-4/5 " title={body} transition:name={body}>
 		  <h2>
-			<span class= ` ${icon}  size-6 bg5" `>f</span>
+			<span class= ` ${icon}  size-6 bg5" `>.</span>
 		  </h2>
-		  <p>
+		  <p >
 			<span>{body}</span>
 		  </p>
 		</a>
@@ -33,5 +24,5 @@ const { href, icon, body } = Astro.props;
 	
 	
 	  
-	
+
 	  
