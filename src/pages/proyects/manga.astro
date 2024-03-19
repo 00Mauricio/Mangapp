@@ -1,66 +1,96 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Contenedor from '@/components/contenedor.astro';
+import Layout from "@/layouts/Layout.astro";
+import Contenedor from "@/components/contenedor.astro";
+import Statisc from "@/components/Statistic.astro";
 ---
 
 <Layout title="Manga">
-    <Contenedor>
-        
-        
-    <div class="flex-center justify-end w-full h-[80vh] " transition:name="Traduccion" >
+    
+    
+  <Contenedor clase="p-4 rounded-md ">
+    
+    <div id="moan" 
+      class="flex-center flex-wrap justify-end w-full min-h-[80vh] mon  rounded-lg relative"
+      transition:name="Traduccion"
+    >
+    <Contenedor clase="  z-10 absolute size-full bg-gray-800/65 w-full rounded-none backdrop-blur-[1px]"></Contenedor>  
 
+    <div class="flex-center min-w-[25%] rounded-md py-4 z-20 ">
         
-        <div class="flex-center">
-            <figure class="size-3/4   rounded-md overflow-hidden">
-                <img src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp" >
-    
-                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-    
-            </figure>
+          <img
+            src="https://dashboard.visorolym.com/storage/comics/covers/1039/resource-lg.webp"
+            class="w-4/5 sm:size-3/4 overflow-hidden rounded-md"
+          />
+        
+      </div>
+
+      <div class="h-full color1 w-1/3 min-w-60 max-w-full   flex-auto z-20 px-0 sm:px-3 ">
+        <div class="size-full flex-center flex-col p-2 relative">
+          <h2 class="text-3xl capitalize bg-clip-text text-transparent bg-gradient-to-r from-[var(--color5)] from-10% via-[var(--color3] to-[var(--color3)] to-80%" data-jname="Bai She II: Qing She Jie Qi">
+            White Snake 2: The Tribulation of the Green Snake
+          </h2>
+          <p class="text-sm text-pretty text-clip   text-slate-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            vel, accusamus ducimus cum suscipit provident possimus. Minus,
+            sapiente possimus? Quam voluptas error, voluptatibus aliquam omnis
+            quisquam quod tempora repellat! Recusandae!
+          </p>
+          <Contenedor clase="  -z-10 absolute size-full  w-full backdrop-blur-[8px] rounded-none sm:rounded-xl"></Contenedor>  
+
         </div>
-    
-        <div class="flex  w-4/5 h-full">
-            <div class="w-full">
-                <div id="rexo" class="size-full flex-center flex-col p-2">
-                    <h2 class="text-3xl" data-jname="Bai She II: Qing She Jie Qi">White Snake 2: The Tribulation of the Green Snake</h2>
-                    <p class="text-sm text-pretty text-clip">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vel, accusamus ducimus cum suscipit provident possimus. Minus, sapiente possimus? Quam voluptas error, voluptatibus aliquam omnis quisquam quod tempora repellat! Recusandae!
-                    </p>    
-                </div>
-                
-            </div>
-            <Contenedor>
-                <div id="rexoa" class="bg-white w-auto">
-                    <h2 class="film-name dynamic-name" data-jname="Bai She II: Qing She Jie Qi">White Snake 2: The Tribulation of the Green Snake</h2>
-                </div>
-            </Contenedor>
-            
-        </div>
-    </div>
-        
-    </Contenedor>
-    <div class="mon backdrop-blur-md">
+      </div>
+
+      
+        <Contenedor clase="py-2 min-w-60   flex-auto sm:flex-1 z-20  rounded-none sm:rounded-xl  mx-0 sm:mx-3  ">
+            <div  class="size-full rounded-md overflow-hidden text-sm text-pretty text-clip   text-slate-300">
+                <Statisc
+                  value="10"
+                  author="mau" 
+                  state="active"
+                  types="traductor"
+                />
+                <Statisc
+                  value="18"
+                  author="mau" 
+                  state="active"
+                  types="traductor"
+                />
+                <Statisc
+                  value="10"
+                  author="mau" 
+                  state="active"
+                  types="traductor"
+                />
+                <Statisc
+                  value="10"
+                  author="mau" 
+                  state="active"
+                  types="traductor"
+                />
+              </div>
+        </Contenedor>
+      
     </div>
 
-
     
+  </Contenedor>
+
+  
+  
+  
+
 </Layout>
 
-
-
 <style>
-.mon{
+  .mon {
     background-image: url("../../images/DE8S.gif");
-    width: 100%;
-    height: 100%;
     background-size: cover;
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    
     overflow: hidden;
-    z-index:-1;
-    filter: grayscale(1);
-}
+
+    /*filter: grayscale(1); ../../images/DE8S.gif  https://wallpapers-clan.com/wp-content/uploads/2024/02/anime-girl-with-closed-eyes-light-pink-desktop-wallpaper-preview.jpg
+  */
+  }
 </style>

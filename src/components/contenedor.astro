@@ -3,6 +3,18 @@
 const {id, clase } = Astro.props;
 ---
 
-<div class= `bg-gray-800/10 backdrop-blur rounded-xl  w-11/12 flex flex-col justify-center items-center min-h-8 py-4  ${clase}  ` id={id}>
+<div class= `bg-gray-800/20 backdrop-blur rounded-xl  w-11/12 flex flex-col justify-center items-center min-h-8 py-4  ${clase}  ` id={id}>
     <slot />
 </div>
+
+<style>
+    .mon {
+      background-image: url("https://wallpapers-clan.com/wp-content/uploads/2024/02/anime-girl-with-closed-eyes-light-pink-desktop-wallpaper-preview.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+  
+      /*filter: grayscale(1); ../../images/DE8S.gif*/
+    }
+  </style>

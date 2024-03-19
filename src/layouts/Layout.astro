@@ -44,13 +44,13 @@ const { title } = Astro.props;
 
         <Icos href='/#' icon="i-bx-home" body='Home' title={title}>
         </Icos>
-        <Icos href='../test' icon="i-bx-trending-up" body='Manga' title={title}>
+        <Icos href='../test' icon="i-bx-trending-up" body='test' title={title}>
         </Icos>
-        <Icos href='../proyectos' icon="i-heroicons-document-check-solid" body='cleaner' title={title}>
+        <Icos href='../proyectos' icon="i-heroicons-document-check-solid" body='proyectos' title={title}>
         </Icos>
-        <Icos href="../proyects/manga" icon="i-heroicons-currency-rupee-16-solid" body="Traduccion" title={title}>
+        <Icos href="#" icon="i-heroicons-currency-rupee-16-solid" body="Traduccion" title={title}>
         </Icos>
-        <Icos href='/#' icon="i-heroicons-heart-solid" body='Favorites' title={title}>
+        <Icos href='../proyects/manga' icon="i-heroicons-heart-solid" body='Manga' title={title}>
         </Icos>
 
     </ul>
@@ -123,9 +123,6 @@ background-color: var(--color1);
   transition: width 0.22s;
   transition-timing-function:ease;
 
-
-
-
   li{
     font-size: 0;
     a{
@@ -135,30 +132,43 @@ background-color: var(--color1);
 
 
   &:hover{
-    
+    width:100%;
     transition-delay: var(--navT);
-    
-   
-        width:100%;
-
-        .enlace-activo{
+       
+  .enlace-activo{
           box-shadow:none;
-          
           background-color: var(--color1);
           transition-property: background-color , box-shadow;
-          transition-delay:  var(--navT);
+          transition-delay: var(--navT); /* poner esto en 0s si da problemas */        
         }
-        li{
+         li{
           font-size: 1.15em;
           line-height: 1.25rem;
           transition-delay:  font-size line-height var(--navT);
 
-                
+             
             &:hover {
             background-color: var(--color2);
             transition: background-color 0.22s;
+            
+            ~ .enlace-activo{
+            box-shadow:none;        
+          background-color: var(--color1);
+          transition-property: background-color , box-shadow;
+          transition-delay:  0s;
+        }
         
             }
+            ~ .enlace-activo{
+            box-shadow:none;        
+          background-color: var(--color1);
+          transition-property: background-color , box-shadow;
+          transition-delay:  0s;
+          &:hover {
+            background-color: var(--color2);
+            transition: background-color 0.22s;
+          }
+          }
 
           h2{
             width: 25%;

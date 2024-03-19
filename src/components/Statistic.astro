@@ -1,0 +1,35 @@
+---
+
+interface Props {
+	author: string;
+	value: string;
+	state: string;
+	[types: string]: string; 
+    
+}
+
+const { value, types, author, state } = Astro.props;
+
+
+const typess = {
+	traductor: "i-heroicons-language-16-solid",
+	cleaner: "i-heroicons-clean-16-solid",
+	draw: "i-heroicons-draw-16-solid"
+};
+
+type TypessKeys = keyof typeof typess;
+var logo: TypessKeys = types as TypessKeys;
+
+
+---
+    
+<div class="flex  justify-around items-center  w-full bg h-11 py-1 hover:border-b-2 hover:bg-gray-800/30 transition-all active:bg-gray-800/50 rounded-t-lg ">
+
+            <a href="#" class= `rounded-full bg5 size-8  ${typess[logo]} ` >
+            
+            </a>
+            <p>{author}</p>
+            <p>{state}</p>
+            <progress max="20" value={value} class="w-[15%] h-2 rounded-md  overflow-hidden"></progress>
+            <time>12.14.2017</time>
+</div>
